@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'bibliotheque/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="ajout/"> ajouter un joueur ou une joueuse de tennis </a>
+ <ol>
+        {% for l in liste %}
+            <li> {{l}} </li>
+     <p><a href="affiche/{{l.id}}"> afficher les détails </a></p>
+     <p><a href="delete/{{l.id}}"> effacer </a></p>
+     <p><a href="update/{{l.id}}"> mise à jour </a></p>
+        {%endfor%}
+    </ol>
+</body>
+</html>
